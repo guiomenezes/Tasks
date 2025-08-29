@@ -1,0 +1,13 @@
+{% extends 'tasks/base_page.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="container">
+    <h1>Create New User</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form | crispy }}
+        <button class="btn btn-primary" type="submit">Create New User</button>
+        <a href="{% url 'login' %}">Already have an account? Click here to log in!</a>
+    </form>
+</div>
+{% endblock %}

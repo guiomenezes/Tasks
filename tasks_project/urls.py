@@ -31,4 +31,3 @@ urlpatterns = [
     path('new_task_page/<int:id_task>', views.edit, name='edit'),
     path('delete_task/<int:id_task>', views.delete, name='delete')
 ]
-#Test

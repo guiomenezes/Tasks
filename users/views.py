@@ -16,3 +16,5 @@ def new_user(request):
             return redirect('login')
     else:
         form = UserRegisterForm()
+    
+    return render(request, 'users/register.html', {'form': form})

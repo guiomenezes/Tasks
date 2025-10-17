@@ -5,13 +5,13 @@ from .models import Tasks
 class TasksForm(ModelForm):
     class Meta:
         model = Tasks
-        fields = ['task title', 'description', 'completed'] # Exclui o campo user do formulário
+        fields = ['task', 'description', 'completed'] # Exclui o campo user do formulário
     
     def __init__(self, *args, **kwargs):
         super(TasksForm, self).__init__(*args, **kwargs)
 
         # Adiciona classes CSS para melhorar a aparência
-        self.fields['task title'].widget.attrs.update({
+        self.fields['task'].widget.attrs.update({
             'class': 'form-control'
         })
 

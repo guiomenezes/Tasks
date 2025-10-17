@@ -11,7 +11,7 @@ class TasksForm(ModelForm):
         super(TasksForm, self).__init__(*args, **kwargs)
 
         # Adiciona classes CSS para melhorar a aparência
-        self.fields['task title'].widget.attrs.update({
+        self.fields['task'].widget.attrs.update({
             'class': 'form-control'
         })
 

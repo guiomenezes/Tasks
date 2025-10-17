@@ -2,8 +2,6 @@ from django.forms import ModelForm
 from .models import Tasks
 
 
-
-
 class TasksForm(ModelForm):
     class Meta:
         model = Tasks
@@ -14,13 +12,11 @@ class TasksForm(ModelForm):
 
         # Adiciona classes CSS para melhorar a aparência
         self.fields['task'].widget.attrs.update({
-            'class': 'form-control',
-            'placeholder': 'Task title'
+            'class': 'form-control'
         })
 
         self.fields['description'].widget.attrs.update({
             'class': 'form-control',
-            'placeholder': 'Description',
             'rows': 5
         })
 
